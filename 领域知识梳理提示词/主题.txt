@@ -1,0 +1,57 @@
+前端校招知识主题（28点）
+
+1. 浏览器与 Web 基础：输入 URL 到页面展示、浏览器多进程架构、渲染流水线（DOM/CSSOM/Render Tree/布局/绘制/合成）、回流/重绘/合成层、事件循环、宏任务与微任务、DOM 事件模型与事件委托、页面生命周期、前端路由原理、跨页面通信、Web Worker / Service Worker / PWA、浏览器存储体系。
+
+2. HTML 与语义化：HTML 语义化、文档结构、表单体系与原生校验、无障碍访问与 ARIA、SEO 基础、图片与多媒体标签、Canvas / SVG 基础。
+
+3. CSS 基础：盒模型与尺寸计算、选择器/优先级/继承、文档流/定位/浮动、BFC/格式化上下文、层叠上下文与 z-index、伪类/伪元素、单位与视口。
+
+4. CSS 布局与适配：Flex 布局、Grid 布局、经典布局方案、响应式设计、移动端适配、1px 问题、Retina 适配、CSS 动画/过渡/变形。
+
+5. CSS 工程化：SCSS/Less、CSS Modules、BEM/命名规范、样式隔离、主题切换、Design Tokens、组件级样式组织。
+
+6. JavaScript 语言基础：数据类型、类型检测、类型转换、变量声明与提升、暂时性死区、执行上下文、作用域链、闭包、this 绑定规则、原型链、继承模型、对象模型、属性描述符、浅拷贝与深拷贝。
+
+7. JavaScript 进阶机制：高阶函数、柯里化、函数组合、Class 与 new、Map/Set/WeakMap/WeakSet、Symbol、Iterator / Generator、Proxy / Reflect、模块化（CommonJS / ESM）、垃圾回收与内存泄漏。
+
+8. 异步编程：Promise、Promise 链、async/await、异常传播、并发控制、取消机制、定时器机制、发布订阅/观察者模式。
+
+9. 网络基础：HTTP 报文、请求方法与状态码、缓存机制、强缓存/协商缓存、Cookie、HTTPS/TLS、HTTP/2、HTTP/3、WebSocket、SSE、长轮询、CDN。
+
+10. 网络安全：同源策略、CORS、跨域方案、鉴权模型（Session/JWT/Token）、XSS、CSRF、点击劫持、CSP、安全头、前端敏感信息保护。
+
+11. TypeScript 基础：基础类型、类型推导、interface 与 type、联合类型、交叉类型、字面量类型、枚举、函数类型、重载、泛型。
+
+12. TypeScript 进阶：类型守卫、控制流收窄、条件类型、infer、映射类型、工具类型、any/unknown/never/void、类型兼容性、协变/逆变、声明文件、第三方库类型扩展。
+
+13. React 基础：JSX、本质与编译、组件化思想、props/state、单向数据流、受控/非受控组件、React 事件系统、组件通信、表单处理。
+
+14. React Hooks：useState、useEffect、useMemo、useCallback、useRef、useContext、自定义 Hook、闭包陷阱、依赖数组、副作用清理。
+
+15. React 原理：虚拟 DOM、Diff、Fiber、调度机制、批量更新、渲染阶段与提交阶段、Concurrent 特性理解。
+
+16. React 工程实践：React Router、状态管理（Redux/Zustand 等）、性能优化、列表渲染、懒加载、错误边界、SSR/CSR/SSG/ISR、Hydration、组件复用模式。
+
+17. Vue 基础：模板语法、响应式原理、生命周期、组件通信、computed/watch、指令系统、插槽、Vue Router。
+
+18. Vue 进阶：Composition API、Pinia/Vuex、Vue2 与 Vue3 响应式差异、模板编译、性能优化、keep-alive。
+
+19. Node.js 与前端协作：Node 事件驱动、CommonJS/ESM、Buffer/Stream、Koa/Express 中间件、BFF、SSR 服务端渲染基础、前端 CLI 脚本。
+
+20. 工程化基础：npm/pnpm、依赖管理、语义化版本、模块解析、Babel/SWC、Webpack/Vite/Rollup、Source Map、环境变量、多环境配置。
+
+21. 工程化进阶：Tree Shaking、代码分割、动态导入、HMR、Monorepo、Workspace、微前端、组件库开发、构建优化、产物分析。
+
+22. 质量保障：ESLint/Prettier/Stylelint、Git 协作、代码评审、单元测试、组件测试、集成测试、E2E 测试、Mock、异常监控、日志上报。
+
+23. 性能优化：Web Vitals、首屏优化、资源加载优化、图片与字体优化、缓存策略、虚拟列表、长任务拆分、防抖节流、懒加载、预加载、预渲染。
+
+24. 架构设计：组件设计原则、状态管理架构、权限系统、路由守卫、可配置化、低代码思路、设计系统、中后台前端架构、可观测性、埋点体系。
+
+25. 跨端与端能力：小程序架构、小程序与 Web 差异、Hybrid 容器、跨端方案（React Native/Taro 等）、JSBridge、H5 与客户端通信。
+
+26. 图形与可视化：Canvas、SVG、图表库原理、离屏渲染、动画性能、可视化交互基础。
+
+27. 高频手写题主题：函数调用机制（call/apply/bind）、对象创建与判断（new/instanceof）、深拷贝、事件总线、发布订阅、Promise 实现、并发调度器、防抖节流、数组扁平化、LRU。
+
+28. 前端场景算法题：数组与字符串、哈希表、双指针、滑动窗口、栈与队列、链表、树遍历、二分、排序、DFS/BFS、贪心、动态规划、前端场景化算法（虚拟列表、diff 简化版、分页/搜索/缓存）。
