@@ -1,0 +1,94 @@
+## 目标：生成多篇（可能大于4篇，由你决定）科普文章，给我每篇飞书云文档的链接
+请将下方列出的 14 个 AI Agent 技术，按照我划分好的【四大模块】（运行时、安全、前沿架构、工程化），拆分为 **4 篇独立的飞书云文档**。
+
+你需要拆分给4个子agent，每个子agent负责生成其中一个模块的完整文档。
+
+**注意：你可以有自己的想法。假设读者对AI Agent的涉猎不广，读者在下方列出的技术是不全的，或者模块划分是错误的。所以你可以调整顺序和补充相关技术，最终，你可能会让大于4个的子agent帮你生成飞书云文档，最后生成的文档数可能会大于4个，由你决定。**
+
+---
+
+## 读者想理解的 AI Agent 技术（共 4 篇文档的内容分配）
+
+### [文档一] Agent 运行时核心机制 
+1. **Tool Use Protocol** — 函数调用规范（OpenAI Function Calling / Anthropic Tool Use / MCP 协议） 
+   - 探索：Schema 定义、参数注入、错误处理、流式工具调用 
+   - 对比：三种主流协议的设计哲学差异 
+
+2. **Context Window Engineering** — 上下文窗口工程 
+   - 探索：Token 预算分配、滑动窗口 vs 摘要压缩 vs RAG 注入、Lost-in-the-middle 问题 
+   - 关键数据：各模型窗口大小对比（截至 2026 年） 
+
+3. **Multi-Agent Orchestration** — 多智能体编排（⚠️必须包含：三种编排模式的架构对比画板图）
+   - 探索：Supervisor 模式 vs Swarm 模式 vs Hierarchical 模式、通信协议、状态共享 
+
+4. **Memory Architecture** — 记忆体系结构 
+   - 探索：工作记忆 vs 短期记忆 vs 长期记忆、向量存储、MemGPT 分页机制 
+   - 对比表：各类记忆方案的读写延迟、容量、持久性 
+
+### [文档二] 可靠性与安全工程 
+5. **Guardrails & Safety Layer** — 护栏与安全层 
+   - 探索：输入过滤、输出校验、OWASP Agentic AI Top 10、Prompt Injection 防御 
+   - 读者的疑问：如何设计多层防御体系 
+
+6. **Evaluation & Observability** — 评估与可观测性（⚠️必须包含：Agent Eval Pipeline 流程画板图）
+   - 探索：离线 Eval（HumanEval、SWE-bench）、在线监控（LangSmith / Braintrust）、Trace 链路 
+
+7. **Error Recovery & Retry Strategy** — 错误恢复与重试策略 
+   - 探索：幂等性设计、Checkpoint 回滚、指数退避、人机接管（Human-in-the-loop） 
+   - 读者的疑问：如何在无人值守模式下保证 Agent 不失控 
+
+### [文档三] 前沿架构模式 
+8. **Agentic RAG** — 代理式检索增强生成（⚠️必须包含：Agentic RAG 循环画板图）
+   - 探索：Query Planning → Retrieval → Self-judge → Adaptive Re-retrieval 循环 
+   - 对比：传统 RAG vs Agentic RAG 的能力边界 
+
+9. **Code Generation Agent** — 代码生成智能体 
+   - 探索：SWE-agent 架构、编辑-测试-修复循环、Sandbox 隔离执行 
+   - 关键指标：SWE-bench Verified 2026 年排行 
+
+10. **Planning with World Models** — 基于世界模型的规划 
+    - 探索：MCTS 搜索、Reward Model 引导、Chain-of-Thought 自洽性 
+    - 读者的疑问：为什么"让 Agent 先想再做"比"直接做"效果好 
+
+11. **Streaming & Real-time Agent** — 流式与实时智能体 
+    - 探索：Server-Sent Events、WebSocket Agent、语音 Agent（Realtime API） 
+    - 对比表：批处理 vs 流式 vs 实时的延迟/吞吐/成本权衡 
+
+### [文档四] 工程化与部署 
+12. **Agent-as-a-Service Deployment** — Agent 服务化部署（⚠️必须包含：生产级 Agent 部署架构画板图）
+    - 探索：无状态 vs 有状态部署、会话亲和性、冷启动优化、成本控制 
+
+13. **Prompt Engineering at Scale** — 规模化 Prompt 工程 
+    - 探索：Prompt 版本管理、A/B 测试、DSPy 自动优化、System Prompt 分层 
+    - 读者的疑问：如何管理 1000+ Agent 的 Prompt 不混乱 
+
+14. **Human-Agent Interaction Pattern** — 人机交互模式 
+    - 探索：审批式、协作式、监督式、全自主式四种交互等级 
+    - 对比表：各模式的信任要求、适用场景、风险等级 
+
+---
+
+**注意：你可以有自己的想法。假设读者对AI Agent的涉猎不广，读者在以上列出的技术是不全的，或者模块划分是错误的。所以你可以调整顺序和补充相关技术，最终，你可能会让大于4个的子agent帮你生成飞书云文档，最后生成的文档数可能会大于4个，由你决定。**
+
+## 单篇文档执行规范（适用于每一篇生成的文档）
+
+请严格按照以下规范生成上述的每一篇文档：
+
+### 一、文档结构模板
+```text
+第一章：本模块概念全景图（必须使用 lark-whiteboard 绘制本篇涵盖技术的关联知识图谱） 
+第二章：[技术概念一] 详解（按需拆入表格、画板。涉及具体实现时，必须插入代码块） 
+第三章：[技术概念二] 详解（结构同上，以此类推，直至覆盖本模块所有概念） 
+第四章：参考文献（逐条列出参考的 GitHub 仓库、公开文章链接等） 
+```
+
+### 二、画板与视觉要求
+- 工具：所有画板必须使用 lark-whiteboard skill 绘制。
+- 风格：自由发挥，能清晰表达即可。
+- 数量：每篇文档除了“第一章的概念全景图”外，还必须包含该模块专属的架构/流程画板（已在上方内容分配中用⚠️标出）。整个项目加起来必须至少有 5 张画板。
+
+### 三、写作约束
+- 字数：大于8000个字。
+- 边界清晰：禁止悬空引用，所有概念必须自包含解释，不得假设读者看过某篇论文。
+- 引用规范：禁止直接引用原文档链接。
+- 内容定位：代码用于直观理解最佳实践，正文用于深度解释。
